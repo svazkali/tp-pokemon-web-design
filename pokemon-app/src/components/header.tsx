@@ -1,14 +1,11 @@
 import React from "react";
+import PokemonLogo from "../images/pokemon-logo.png";
 
 const Header: React.FC = () => {
 	return (
 		<header style={styles.header}>
 			<div style={styles.logo}>
-				<img
-					src="https://via.placeholder.com/100x50"
-					alt="Logo"
-					style={styles.logoImage}
-				/>
+				<img src={PokemonLogo} alt="Logo" style={styles.logoImage} />
 			</div>
 			<h1 style={styles.title}>Pokémon Explorer</h1>
 		</header>

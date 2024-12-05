@@ -2,12 +2,20 @@ import React, { useState } from "react";
 import Header from "./header";
 import Navbar from "./navbar";
 import Card from "./pokemon-cards/card";
+import { pokemons as pokemonsList } from "../pokemons";
+import { Pokemon, PokemonType } from "../pokemons/types";
 
 const MainPage: React.FC = () => {
 	const [selectedType, setSelectedType] = useState<string | null>(null);
+	const [pokemons, setPokemons] = useState<Pokemon[]>(pokemonsList);
 
-	const handleTypeSelect = (type: string) => {
+	const handleTypeSelect = (type: PokemonType | null) => {
 		setSelectedType(type);
+		if (!type) {
+			setPokemons(pokemonsList);
+		} else {
+			setPokemons(pokemonsList.filter((pokemon) => pokemon.type === type));
+		}
 	};
 
 	return (
@@ -16,20 +24,21 @@ const MainPage: React.FC = () => {
 			<Navbar onTypeSelect={handleTypeSelect} />
 			<main style={styles.main}>
 				{selectedType ? (
-					<h2 style={styles.heading}>Selected Type: {selectedType}</h2>
+					<h2 style={styles.heading}>Tipo Seleccionado: {selectedType}</h2>
 				) : (
-					<h2 style={styles.heading}>Select a Pokémon Type</h2>
+					<h2 style={styles.heading}>Selecciona un Pokemon</h2>
 				)}
 				<div style={styles.cardsContainer}>
-					{/* Example: Showing one card for demonstration */}
-					<Card
-						id={4}
-						name="Charmander"
-						url=""
-						hp={40}
-						description={"sarasa"}
-						type="fire"
-					/>
+					{pokemons.map((pokemon) => (
+						<Card
+							id={pokemon.id}
+							name={pokemon.name}
+							url={pokemon.image}
+							hp={pokemon.hp}
+							description={pokemon.description}
+							type={pokemon.type}
+						/>
+					))}
 				</div>
 			</main>
 		</div>

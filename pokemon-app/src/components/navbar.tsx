@@ -1,11 +1,18 @@
 import React from "react";
+import { PokemonType } from "../pokemons/types";
 
 interface NavbarProps {
-	onTypeSelect: (type: string) => void;
+	onTypeSelect: (type: PokemonType | null) => void;
 }
 
 const Navbar: React.FC<NavbarProps> = ({ onTypeSelect }) => {
-	const types = ["Fire", "Water", "Grass", "Electric", "Normal"];
+	const types = [
+		"fire",
+		"water",
+		"grass",
+		"electric",
+		"normal",
+	] as PokemonType[];
 
 	return (
 		<nav style={styles.nav}>
@@ -13,10 +20,13 @@ const Navbar: React.FC<NavbarProps> = ({ onTypeSelect }) => {
 				<button
 					key={type}
 					style={styles.button}
-					onClick={() => onTypeSelect(type.toLowerCase())}>
+					onClick={() => onTypeSelect(type)}>
 					{type}
 				</button>
 			))}
+			<button style={styles.button} onClick={() => onTypeSelect(null)}>
+				Todos
+			</button>
 		</nav>
 	);
 };
