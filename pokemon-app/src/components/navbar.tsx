@@ -25,7 +25,7 @@ const Navbar: React.FC<NavbarProps> = ({ onTypeSelect }) => {
 				</button>
 			))}
 			<button style={styles.button} onClick={() => onTypeSelect(null)}>
-				Todos
+				All
 			</button>
 		</nav>
 	);

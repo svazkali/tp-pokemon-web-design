@@ -18,7 +18,7 @@ const styles = {
 		alignItems: "center",
 		justifyContent: "space-between",
 		padding: "10px 20px",
-		backgroundColor: "#f8d030",
+		backgroundColor: "#000",
 		borderBottom: "2px solid #e0c020",
 	},
 	logo: {
@@ -26,7 +26,7 @@ const styles = {
 		alignItems: "center",
 	},
 	logoImage: {
-		height: "50px",
+		height: "100px",
 	},
 	title: {
 		fontSize: "24px",
