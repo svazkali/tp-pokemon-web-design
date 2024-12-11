@@ -163,4 +163,68 @@ export const pokemons: Pokemon[] = [
 		description:
 			"Este Pokémon está lleno de vitalidad. Constantemente vuela alrededor de su gran territorio en busca de presas.",
 	},
+	{
+		id: 19,
+		name: "Rattata",
+		type: "normal",
+		image: "https://www.serebii.net/pokemongo/pokemon/019.png",
+		hp: 30,
+		description:
+			"Con sus bigotes, puede sentir cosas que no se pueden ver, incluso en la oscuridad total.",
+	},
+	{
+		id: 60,
+		name: "Poliwag",
+		type: "water",
+		image: "https://www.serebii.net/pokemongo/pokemon/060.png",
+		hp: 40,
+		description:
+			"Su piel es tan delgada que se puede ver su interior. Prefiere el agua limpia y fresca.",
+	},
+	{
+		id: 27,
+		name: "Sandshrew",
+		type: "normal",
+		image: "https://www.serebii.net/pokemongo/pokemon/027.png",
+		hp: 50,
+		description:
+			"Su cuerpo está cubierto por una piel dura que lo protege de los ataques. Vive en madrigueras subterráneas.",
+	},
+	{
+		id: 43,
+		name: "Oddish",
+		type: "grass",
+		image: "https://www.serebii.net/pokemongo/pokemon/043.png",
+		hp: 45,
+		description:
+			"Durante el día, se entierra en el suelo para absorber nutrientes. Por la noche, se mueve para esparcir sus semillas.",
+	},
+	{
+		id: 77,
+		name: "Ponyta",
+		type: "fire",
+		image: "https://www.serebii.net/pokemongo/pokemon/077.png",
+		hp: 50,
+		description:
+			"Su melena está hecha de llamas intensas. Corre a gran velocidad, dejando un rastro de fuego a su paso.",
+	},
+	{
+		id: 120,
+		name: "Staryu",
+		type: "water",
+		image: "https://www.serebii.net/pokemongo/pokemon/120.png",
+		hp: 30,
+		description:
+			"Puede regenerar cualquier parte de su cuerpo que se haya perdido en una batalla. Brilla intensamente en la oscuridad.",
+	},
+	{
+		id: 81,
+		name: "Magnemite",
+		type: "electric",
+		image: "https://www.serebii.net/pokemongo/pokemon/081.png",
+		hp: 25,
+		description:
+			"Genera un campo magnético que le permite flotar en el aire. Se alimenta de electricidad.",
+	}
+	
 ];

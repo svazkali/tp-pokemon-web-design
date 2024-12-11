@@ -30,14 +30,7 @@ const MainPage: React.FC = () => {
 				)}
 				<div style={styles.cardsContainer}>
 					{pokemons.map((pokemon) => (
-						<Card
-							id={pokemon.id}
-							name={pokemon.name}
-							url={pokemon.image}
-							hp={pokemon.hp}
-							description={pokemon.description}
-							type={pokemon.type}
-						/>
+						<Card pokemon={pokemon} />
 					))}
 				</div>
 			</main>
